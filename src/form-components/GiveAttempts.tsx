@@ -14,11 +14,11 @@ export function GiveAttempts(): React.JSX.Element {
         }
     }
 
-    function addAttempts() {
+    function addAttempts(): void {
         setAttempts(attempts + numInput);
     }
 
-    function useAttempts() {
+    function useAttempts(): void {
         setAttempts(attempts - 1);
     }
 
@@ -29,7 +29,7 @@ export function GiveAttempts(): React.JSX.Element {
             <FormControl type="number" placeholder="Input Attempts:" onChange={checkValidNum}/>
             <Button onClick={useAttempts} disabled={attempts === 0}>use</Button>
             <Button onClick={addAttempts}>gain</Button>
-            <span>{attempts}</span>
+            <span>Attempts left: {attempts}</span>
         </FormGroup>
     
     );
