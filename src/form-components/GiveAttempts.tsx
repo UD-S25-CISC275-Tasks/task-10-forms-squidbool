@@ -25,7 +25,7 @@ export function GiveAttempts(): React.JSX.Element {
     return (
     
         <FormGroup>
-            <FormLabel>Give Attempts</FormLabel>
+            <FormLabel>Give Attempts Component</FormLabel>
             <FormControl type="number" placeholder="Input Attempts:" onChange={checkValidNum}/>
             <Button onClick={useAttempts} disabled={attempts === 0}>use</Button>
             <Button onClick={addAttempts}>gain</Button>

@@ -27,11 +27,12 @@ export function EditMode(): React.JSX.Element {
 
     return (
         <div>
-            <FormCheck type="switch" label="Edit User" checked={editMode} onChange={turnOnEdit}/>
+            <FormLabel style={{padding: 10}}>Edit Mode Component</FormLabel>
+            <FormCheck inline type="switch" label="Edit User" checked={editMode} onChange={turnOnEdit}/>
             {!editMode  ? <span>{userInfo.name} {userInfo.isStudent ? "is a student" : "is not a student"}</span> : 
                 <FormGroup>
                     <FormControl value={userInfo.name} placeholder="Enter user's name here:" onChange={editUserName}/> 
-                    <FormCheck type="checkbox" id="is-student" label="User is a student?" checked={userInfo.isStudent} onChange={editIsStudent}/>
+                    <FormCheck inline type="checkbox" id="is-student" label="User is a student?" checked={userInfo.isStudent} onChange={editIsStudent}/>
                 </FormGroup>
             }
         </div>
