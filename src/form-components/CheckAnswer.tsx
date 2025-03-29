@@ -15,7 +15,7 @@ export function CheckAnswer({
     return (
         <FormGroup>
             <FormLabel>Check Answer Component</FormLabel>
-            <FormControl value={answer} onChange={callSetAns} placeholder="Type your answwer here:"/>
+            <FormControl value={answer} onChange={callSetAns} placeholder="Type your answer here:"/>
             {answer === expectedAnswer && <span>✔️</span>}
             {answer !== expectedAnswer && <span>❌</span>}
         </FormGroup>
